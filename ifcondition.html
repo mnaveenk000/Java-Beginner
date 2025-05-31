@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>If Conditions Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            padding: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>If Conditions Demo</h1>
+    
+    <div class="form-group">
+        <label for="age">Enter Age:</label>
+        <input type="number" id="age" required>
+    </div>
+
+    <button onclick="checkConditions()">Check Conditions</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkConditions() {
+            // Get the age value
+            let age = parseInt(document.getElementById('age').value);
+            let resultText = '';
+
+            // Simple if condition
+            if (age >= 18) {
+                resultText = "You are eligible to vote!";
+            } else {
+                resultText = "You are not eligible to vote yet.";
+            }
+
+            // Display the result
+            document.getElementById('result').innerHTML = `<p>${resultText}</p>`;
+        }
+    </script>
+</body>
+</html> 
